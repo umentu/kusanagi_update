@@ -26,8 +26,8 @@ for d in `ls -d /home/kusanagi/*/DocumentRoot`; do
     mysqldump -u$db_user -p$db_password -h$db_host $db_name > $db_name_dump_$dt.dump
 
     # データを残す期間以上に残していたら一番古いものを削除
-    if [ `ls bkup/$d| wc -l` -ge $SPAN ]; then
-        rm -f bkup/$d/`ls bkup/$d|head -1`;
+    if [ `ls backup/$d| wc -l` -ge $SPAN ]; then
+        rm -f backup/$d/`ls backup/$d|head -1`;
     fi
 
     # update
