@@ -9,7 +9,7 @@ BASE_DIR=`pwd`
 alias wp='sudo -u kusanagi /usr/local/bin/wp'
 
 # productionごと
-for d in `ls /home/kusanagi`; do
+for d in `ls /home/kusanagi|grep -v kusanagi_update`; do
 
 	cd /home/kusanagi/$d/DocumentRoot;
 
