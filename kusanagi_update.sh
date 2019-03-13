@@ -7,10 +7,9 @@ SPAN=7
 alias wp='sudo -u kusanagi /usr/local/bin/wp'
 
 # productionごと
-for d in `ls -d /home/kusanagi/*/DocumentRoot`; do
+for d in `ls /home/kusanagi`; do
 
-	cd $d;
-
+	cd /home/kusanagi/$d/DocumentRoot;
 
     # データのバックアップ
     if [ ! -e backup/$d ]; then
