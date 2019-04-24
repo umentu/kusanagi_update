@@ -29,6 +29,6 @@ for d in `ls /home/kusanagi|grep -v kusanagi_update`; do
     fi
 
     # update
-	wp core update && wp plugin update --all && wp theme update --all && wp core language update;
+	/usr/local/bin/wp core update && /usr/local/bin/wp plugin update --all && /usr/local/bin/wp theme update --all && /usr/local/bin/wp core language update;
 
 done
