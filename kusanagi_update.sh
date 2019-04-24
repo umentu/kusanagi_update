@@ -3,7 +3,7 @@
 #データを残す日数
 SPAN=7
 
-BASE_DIR=`pwd`
+BASE_DIR=`$(cd $(dirname $0); pwd)`
 
 # wpのalias
 alias wp='sudo -u kusanagi /usr/local/bin/wp'
@@ -16,8 +16,8 @@ for d in `ls /home/kusanagi|grep -v kusanagi_update`; do
     # データのバックアップ
     if [ ! -e $BASE_DIR/backup/$d ]; then
         mkdir $BASE_DIR/backup/$d;
-    fi 
-    
+    fi
+
     db_name=`cat wp-config.php|grep DB_NAME|cut -d"'" -f4`
     db_user=`cat wp-config.php|grep DB_USER|cut -d"'" -f4`
     db_host=`cat wp-config.php|grep DB_HOST|cut -d"'" -f4`
