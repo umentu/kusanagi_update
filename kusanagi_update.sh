@@ -5,9 +5,6 @@ SPAN=7
 
 BASE_DIR=$(cd $(dirname $0); pwd)
 
-# wpのalias
-alias wp='sudo -u kusanagi /usr/local/bin/wp'
-
 # productionごと
 for d in `ls /home/kusanagi|grep -v kusanagi_update`; do
 
