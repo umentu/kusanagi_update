@@ -3,7 +3,7 @@
 #データを残す日数
 SPAN=7
 
-BASE_DIR=`$(cd $(dirname $0); pwd)`
+BASE_DIR=$(cd $(dirname $0); pwd)
 
 # wpのalias
 alias wp='sudo -u kusanagi /usr/local/bin/wp'
