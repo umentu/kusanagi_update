@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #データを残す日数
 SPAN=7
